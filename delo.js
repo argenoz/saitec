@@ -182,7 +182,7 @@ function delo()
 
 function sohran()
 	{
-		navigator.clipboard.writeText(document.location.host+"?page="+linka);
+		navigator.clipboard.writeText(document.location.host+"/saitec/?page="+linka);
 		
 	}
 
