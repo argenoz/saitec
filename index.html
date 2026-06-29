@@ -1,0 +1,149 @@
+<html>
+	<head>
+	<meta charset="utf-8" />
+	<script src="jquery.js"></script>
+		<script src='./MathJax-2.5.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+	<script src="delo.js">
+	</script>
+	<style>
+		.the_block, .the_block > *
+			{
+			width:100%;
+			height:100%;
+			user-select:none;
+			}
+			
+			
+		.the_big_block
+			{
+			display:grid;
+			grid-template-columns:100%;
+			grid-template-rows:100px auto;
+			}
+		.the_main_menu_line
+			{
+			background-color:#910000;
+			display:flex;
+			overflow-x:auto;
+			align-items: center;
+			column-gap:10px;
+			}
+		.the_content_cols
+			{
+			display:grid;
+			grid-template-columns:200px auto;
+			grid-template-rows:100%;
+			}
+		
+		.the_content_cols>*
+			{
+			padding:1px;
+			}
+
+		.the_local_menu  
+			{
+			display:flex;
+			flex-direction:column;
+			overflow-y:auto;
+			border-style:solid;
+			border-width:2px;
+			}
+		.the_content_place
+			{
+			overflow-y:auto;
+			width:100%;
+			}
+		.the_main_menu_line > *
+			{
+			height:100%;
+			width:200px;
+			display:flex;
+			align-items: center;
+			 font-family:sevenK;
+			}
+		.the_content_block
+			{
+			display:block;
+			position:absolute;
+			user-select:text;
+			//height:calc(100% - 15px);
+			width:calc(100% - 240px);
+			}
+		
+		math-a {
+        color: blue; /* Синий цвет по умолчанию */
+        text-decoration: none; /* Убираем подчеркивание */
+        font-weight: 500; /* Небольшое усиление шрифта */
+        transition: all 0.3s ease; /* Плавный переход для всех свойств за 0.3 секунды */
+        position: relative; /* Нужно для псевдоэлемента */
+        display: inline-block; /* Чтобы псевдоэлемент работал как надо */
+    }
+
+    /* Стиль при наведении */
+    math-a:hover {
+        color: limegreen; /* Салатовый цвет при наведении */
+        
+        /* Добавим подчеркивание снизу, которое плавно появляется */
+        text-decoration: none;
+        /*padding-bottom: 2px;*/ /* Место для линии */
+
+        /* Создаем линию с помощью псевдоэлемента */
+       /* border-bottom: 2px solid limegreen;*/
+    }
+	.spisochek__vverh
+		{
+		padding:20px;
+		height:60%;
+		}
+	
+	@font-face {
+  font-family: 'sevenK';
+  src: url('./other/GameofThronesKG.ttf');
+  font-style: normal;
+  font-display: swap; /* Чтобы текст не «прыгал» при загрузке */
+	}
+	.the_local_menu_content
+	{
+	display:flex;
+			flex-direction:column;
+	}
+	
+	.sohranit_ssylku
+	{
+	font-soze:15pt;
+	color: blue;
+	}
+	
+	.sohranit_ssylku:hover
+	{
+	color: #202099;
+	}
+	
+		
+	</style>
+	<link href="./other/GameofThronesKG.ttf" rel="stylesheet" />
+	</head>
+	<body onload="delo()">
+	<div class="the_block the_big_block">
+		<div class="the_main_menu_line">
+			<math-a href="hmenu/main.php" class="spisochek__vverh">Главная</math-a>
+			<math-a href="CHaVo.htm" class="spisochek__vverh">ЧаВо</math-a>
+			<math-a href="nova.htm" class="spisochek__vverh">новое</math-a>
+			<div  onclick="sohran()" class="sohranit_ssylku"><center>Сохранить ссылку</center></div>
+		</div>
+		<div class="the_content_cols">
+			<div class="the_local_menu">
+				<div class="the_local_menu_title">
+				<center>Ссылки</center>
+				</div>
+				<div class="the_local_menu_content">
+				</div>
+			</div>
+			<div class="the_content_place">
+				<div class="the_content_block ">qwe
+				</div>
+			</div>
+		</div>
+	</div>
+	</body>
+</html>
