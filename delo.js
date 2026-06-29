@@ -182,7 +182,7 @@ function delo()
 
 function sohran()
 	{
-		navigator.clipboard.writeText(document.location.href+"/?page="+linka);
+		navigator.clipboard.writeText(document.location.href+"?page="+linka);
 		
 	}
 
