@@ -164,7 +164,7 @@ function delo()
 		}
 	else
 		{
-			let oo = l.origin;
+			let oo = l.href;
 			l = l.host;
 			let stro = "";
 			c.forEach((q,a)=>{
