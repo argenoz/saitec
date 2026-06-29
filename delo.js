@@ -175,7 +175,7 @@ function delo()
 				}
 				);
 			stro = stro+" domain="+l+"; max-age=3600; path=/; ";
-			document.location=document.location.host+document.location.pathname ;
+			document.location=document.location.origin+document.location.pathname ;
 			
 		}
 }
